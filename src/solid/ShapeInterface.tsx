@@ -1,3 +1,4 @@
 export interface ShapeInterface {
-    area(): number
+    area(): number,
+    perimeter(): number;
 }

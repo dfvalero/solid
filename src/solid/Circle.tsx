@@ -10,4 +10,8 @@ export class Circle implements ShapeInterface {
     area(): number {
         return Math.PI * Math.pow(this.radius, 2);
     }
+
+    perimeter(): number {
+        return 2 * Math.PI * this.radius;
+    }
 }

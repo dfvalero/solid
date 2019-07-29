@@ -1,12 +1,22 @@
 import React from 'react';
 
+type Total = {
+  totalArea: string,
+  totalPerimeter: string
+}
+
 type AppProps = {
-  total: number
+  total: Total
 }
 
 const app = ({total} : AppProps) => {
+  const { totalArea, totalPerimeter } = total;
+
   return (
-      <div>Total: {total}</div>
+      <>
+        <div>{totalArea}</div>
+        <div>{totalPerimeter}</div>
+      </>
   );
 };
 

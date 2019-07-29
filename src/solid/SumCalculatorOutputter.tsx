@@ -1,22 +1,18 @@
-type JSON = {
-    total: number
-}
-
 export class SumCalculatorOutputter {
     total: number;
+    type: string;
 
-    constructor(total: number) {
+    constructor(total: number, type: string) {
         this.total = total;
+        this.type = type;
     }
 
-    JSON(): JSON {
-        return {
-            total: this.total
-        };
+    toString(): string {
+        return `Total ${this.type}: ${this.total}`;
     }
 
     log(): undefined {
-        console.log(`Total: ${this.total}`);
+        console.log(`Total ${this.type}: ${this.total}`);
         return;
     }
 }
