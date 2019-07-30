@@ -1,13 +1,5 @@
 import React from 'react';
-
-type Total = {
-  totalArea: string,
-  totalPerimeter: string
-}
-
-type AppProps = {
-  total: Total
-}
+import {AppProps} from "./App.type";
 
 const app = ({total} : AppProps) => {
   const { totalArea, totalPerimeter } = total;

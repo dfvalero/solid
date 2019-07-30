@@ -4,6 +4,7 @@ import { Square } from './Square';
 import { AreaCalculator } from './AreaCalculator';
 import { SumCalculatorOutputter } from './SumCalculatorOutputter';
 import {PerimeterCalculator} from "./PerimeterCalculator";
+import {Total} from "./total.type";
 
 const circle = new Circle(new Random(1, 10).generate());
 const square = new Square(new Random(1, 10).generate());
@@ -17,7 +18,7 @@ const perimeterOutputter = new SumCalculatorOutputter(totalPerimeter, 'Perimeter
 areaOutputter.log();
 perimeterOutputter.log();
 
-export default {
+export const total: Total = {
     totalArea: areaOutputter.toString(),
     totalPerimeter: perimeterOutputter.toString()
 };
